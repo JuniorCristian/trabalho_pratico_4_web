@@ -10,7 +10,7 @@ class QuestionController extends Controller
 {
     public function index()
     {
-        $question = Questao::select("pergunta", "imagem", "resposta_correta", "resposta_incorreta_1", "resposta_incorreta_2", "resposta_incorreta_3")->inRandomOrder()->limit('2')->get();
+        $question = Questao::select("pergunta", "imagem", "resposta_correta", "resposta_incorreta_1", "resposta_incorreta_2", "resposta_incorreta_3")->inRandomOrder()->limit('10')->get();
 
 
         $response = ['response_code'=>1, 'results'=>$question];
